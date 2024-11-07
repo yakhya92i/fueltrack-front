@@ -28,7 +28,7 @@ function SignIn() {
         e.preventDefault();
 
         try {
-            const response = await axios.post("http://localhost:5001/api/user/signup", data);
+            const response = await axios.post("https://fueltrack-back.onrender.com/signup", data);
             window.location.reload();
         } catch (error) {
             console.log(error);
@@ -42,7 +42,7 @@ function SignIn() {
         e.preventDefault();
 
         try {
-            const url = "http://localhost:5001/api/user/signin";
+            const url = "https://fueltrack-back.onrender.com/signin";
 
             const { data: response } = await axios.post(url, data);
             console.log(response);
